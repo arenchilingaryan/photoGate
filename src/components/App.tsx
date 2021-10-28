@@ -1,7 +1,12 @@
 import React from 'react'
 
 const App: React.FC = () => {
-    return <div>Kak dela?</div>
+    return (
+        <div>
+            Zdarove
+            <button role="heading" disabled>Privet</button>
+        </div>
+    )
 }
 
 export default App;
