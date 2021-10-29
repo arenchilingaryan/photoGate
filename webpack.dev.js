@@ -1,13 +1,9 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { merge } = require('webpack-merge')
+const common = require('./webpack.common.js')
 
-module.exports = {
+module.exports = merge(common,{
     mode: 'development',
-    entry: path.resolve(__dirname, 'src/index.tsx'),
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-    },
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'),
@@ -15,7 +11,6 @@ module.exports = {
         compress: true,
         port: 3000,
     },
-    plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
     module: {
         rules: [
             {
@@ -25,8 +20,8 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            '@babel/preset-react',
                             "@babel/preset-typescript",
+                            '@babel/preset-react',
                             ['@babel/preset-env', {targets: {node: 'current'}}],
                         ]
                     }
@@ -39,6 +34,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js', '.jsx'],
     },
-};
+});
