@@ -6,11 +6,12 @@ module.exports = {
     transform: {
         '^.+\\.(ts|tsx)?$': 'ts-jest',
         "^.+\\.(js|jsx)$": "babel-jest",
+        ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform"
     },
     testPathIgnorePatterns: ['<rootDir>/node_modules/'],
     globals: {
         'ts-jest': {
-            tsconfig: 'tsconfig.js',
+            tsconfig: 'tsconfig.json',
         },
     },
     moduleFileExtensions: [
