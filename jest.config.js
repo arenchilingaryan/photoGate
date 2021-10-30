@@ -10,7 +10,7 @@ module.exports = {
     testPathIgnorePatterns: ['<rootDir>/node_modules/'],
     globals: {
         'ts-jest': {
-            tsconfig: 'tsconfig.json',
+            tsconfig: 'tsconfig.js',
         },
     },
     moduleFileExtensions: [

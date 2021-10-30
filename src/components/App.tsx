@@ -1,8 +1,9 @@
-import * as React from 'react'
+import React from 'react'
+import './App.css'
 
 const App = () => {
     return (
-        <div>
+        <div className="div">
             Zdarove
             <button role="heading" disabled>Privet</button>
         </div>
