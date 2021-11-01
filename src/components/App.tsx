@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'shared/button/button';
 import './App.css';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <button role="heading" disabled>
         Privet
       </button>
+      <Button />
     </div>
   );
 };
