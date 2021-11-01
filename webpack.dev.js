@@ -40,8 +40,5 @@ module.exports = merge(common, {
                 type: 'asset/resource',
             },
         ]
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.jsx'],
-    },
+    }
 });

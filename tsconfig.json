@@ -11,6 +11,10 @@
         "experimentalDecorators": true,
         "incremental": true,
         "lib": ["dom", "esnext"],
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "paths": {
+            "utils": ["src/utils/"],
+            "shared": ["src/components/shared/*"]
+        }
     }
 }
