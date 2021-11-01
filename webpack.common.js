@@ -11,4 +11,11 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js', '.jsx'],
+        alias: {
+            utils: path.resolve(__dirname, 'src/utils/'),
+            shared: path.resolve(__dirname, 'src/components/shared/')
+        },
+    },
 };

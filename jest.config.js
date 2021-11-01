@@ -1,3 +1,6 @@
+const {pathsToModuleNameMapper} = require('ts-jest/utils')
+const {compilerOptions} = require('./tsconfig.json')
+
 module.exports = {
     preset: 'ts-jest',
     coverageReporters: ['html', 'lcov', 'text'],
@@ -26,5 +29,8 @@ module.exports = {
         "node_modules",
         "bower_components",
         "shared"
-    ]
+    ],
+    moduleNameMapper: {
+        ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir />' })
+    }
 }
