@@ -1,5 +1,5 @@
 {
-  "name": "PhotoGate",
+  "name": "photo-gate",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.common.js",
