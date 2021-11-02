@@ -13,8 +13,9 @@
     "lib": ["dom", "esnext"],
     "esModuleInterop": true,
     "paths": {
-      "utils": ["src/utils/"],
-      "shared": ["src/components/shared/*"]
-    }
+      "utils/*": ["src/utils/*"],
+      "shared/*": ["src/components/shared/*"]
+    },
+    "baseUrl": "."
   }
 }
