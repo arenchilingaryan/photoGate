@@ -8,7 +8,25 @@
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clone:auth": "git clone https://github.com/arenchilingaryan/photoGate-Auth.git ../Auth",
+    "clone:events": "git clone https://github.com/arenchilingaryan/photoGate-Events.git ../Events",
+    "clone:landing": "git clone https://github.com/arenchilingaryan/photoGate-Landing.git ../Landing",
+    "clone:layouts": "git clone https://github.com/arenchilingaryan/photoGate-Layouts.git ../Layouts",
+    "clone:messages": "git clone https://github.com/arenchilingaryan/photoGate-Messages.git ../Messages",
+    "clone:profile": "git clone https://github.com/arenchilingaryan/photoGate-Profile.git ../Profile",
+    "clone:search": "git clone https://github.com/arenchilingaryan/photoGate-Search.git ../Search",
+    "install:auth": "cd ../Auth/ && npm install",
+    "install:events": "cd ../Events/ && npm install",
+    "install:landing": "cd ../Landing/ && npm install",
+    "install:layouts": "cd ../Layouts/ && npm install",
+    "install:messages": "cd ../Messages/ && npm install",
+    "install:profile": "cd ../Profile/ && npm install",
+    "install:search": "cd ../Search/ && npm install",
+    "install:all": "npm install && npm run install:auth && npm run install:events && npm run install:landing && npm run install:layouts && npm run install:messages && npm run install:profile && npm run install:search",
+    "createfolders": "cd .. && mkdir Auth && mkdir Events && mkdir Landing && mkdir Layouts && mkdir Messages && mkdir Profile && mkdir Search",
+    "clone:all": "npm run clone:auth && npm run clone:events && npm run clone:landing && npm run clone:layouts && npm run clone:messages && npm run clone:profile && npm run clone:search",
+    "setup:all": "npm run createfolders && npm run clone:all && npm run install:all"
   },
   "keywords": [],
   "author": "",
@@ -52,6 +70,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "concurrently": "^6.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
