@@ -12,7 +12,6 @@ module.exports = {
       filename: "main.bundle.js",
       remotes: {
         layouts: 'Layouts@http://localhost:3001/main.bundle.js'
-        // layouts: path.resolve(__dirname, '../Layouts/dist/main.bundle.js')
       },
       exposes: {},
       shared: {
