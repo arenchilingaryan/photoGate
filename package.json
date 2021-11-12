@@ -15,7 +15,7 @@
     "start:search": "cd ../Search/ && npm run start",
     "start:all": "run-p start start:auth start:events start:landing start:layouts start:messages start:search start:profile",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint --fix",
+    "lint": "eslint --fix .",
     "prepare": "husky install",
     "clone:auth": "git clone https://github.com/arenchilingaryan/photoGate-Auth.git ../Auth",
     "clone:events": "git clone https://github.com/arenchilingaryan/photoGate-Events.git ../Events",
