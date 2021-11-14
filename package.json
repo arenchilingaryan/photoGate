@@ -5,6 +5,7 @@
   "main": "webpack.common.js",
   "scripts": {
     "test": "jest",
+    "kill-all-ports": "npx kill-port 3000 && npx kill-port 3001 && npx kill-port 3002 && npx kill-port 3003 && npx kill-port 3004 && npx kill-port 3005 && npx kill-port 3006 && npx kill-port 3007 && npx kill-port 3008",
     "start": "cross-env NODE_ENV=development webpack serve --open --config webpack.dev.js",
     "start:auth": "cd ../Auth/ && npm run start",
     "start:meetings": "cd ../Meetings/ && npm run start",
@@ -13,7 +14,7 @@
     "start:messages": "cd ../Messages/ && npm run start",
     "start:profile": "cd ../Profile/ && npm run start",
     "start:search": "cd ../Search/ && npm run start",
-    "start:all": "run-p start start:auth start:meetings start:landing start:layouts start:messages start:search start:profile",
+    "start:all": "npm run kill-all-ports && run-p start start:auth start:meetings start:landing start:layouts start:messages start:search start:profile",
     "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "build:auth": "cd ../Auth/ && npm run build",
     "build:meetings": "cd ../Meetings/ && npm run build",
