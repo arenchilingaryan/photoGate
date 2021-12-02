@@ -4,13 +4,14 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'development',
+  target: process.env.NODE_ENV === "development" ? 'web' : "browserslist",
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    compress: true,
     port: 3000,
-    historyApiFallback: true
+    historyApiFallback: true,
+    hot: true,
   },
   module: {
     rules: [

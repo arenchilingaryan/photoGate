@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import ErrorBoundary from '../ErrorBoundary';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
@@ -76,6 +76,7 @@ const buttonStyles = {
 }
 
 const App = () => {
+  const [state, setState] = useState(1)
   return (
     <BrowserRouter>
       <div style={{display: 'flex', marginTop:'30px'}}>
@@ -92,7 +93,8 @@ const App = () => {
         <React.Suspense fallback={<div>POSHEL NAXYU</div>}>
           <Switch>
             <Route exact path="/">
-              <div style={{ fontSize: '100px' }}>
+              {console.log(state)}
+              <div style={{ fontSize: '100px' }} onClick={() => setState(prev => prev+1)}>
                 HOST
               </div>
             </Route>
